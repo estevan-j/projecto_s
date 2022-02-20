@@ -48,6 +48,8 @@
             this.txtNumeroMaletas = new System.Windows.Forms.TextBox();
             this.txtInformación = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // linkLabel2
@@ -107,9 +109,11 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Location = new System.Drawing.Point(333, 33);
+            this.lblTitulo.Font = new System.Drawing.Font("Modern No. 20", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblTitulo.Location = new System.Drawing.Point(197, 18);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(161, 13);
+            this.lblTitulo.Size = new System.Drawing.Size(425, 29);
             this.lblTitulo.TabIndex = 11;
             this.lblTitulo.Text = "Boletería Viajes Interprovinciales";
             this.lblTitulo.Click += new System.EventHandler(this.label7_Click);
@@ -127,6 +131,17 @@
             // cmbProvincias
             // 
             this.cmbProvincias.FormattingEnabled = true;
+            this.cmbProvincias.Items.AddRange(new object[] {
+            "ESMERALDAS $9",
+            "MANABI $10",
+            "GUAYAQUIL $20",
+            "CUENCA $25",
+            "LOJA",
+            "AMBATO",
+            "LATACUNGA",
+            "IBARRA",
+            "RIOBAMBA",
+            "TULCAN"});
             this.cmbProvincias.Location = new System.Drawing.Point(202, 82);
             this.cmbProvincias.Name = "cmbProvincias";
             this.cmbProvincias.Size = new System.Drawing.Size(121, 21);
@@ -201,6 +216,7 @@
             this.btnComprar.TabIndex = 21;
             this.btnComprar.Text = "Comprar";
             this.btnComprar.UseVisualStyleBackColor = true;
+            this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
             // 
             // txtNumeroMaletas
             // 
@@ -212,9 +228,10 @@
             // txtInformación
             // 
             this.txtInformación.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtInformación.Location = new System.Drawing.Point(228, 339);
+            this.txtInformación.Location = new System.Drawing.Point(224, 309);
+            this.txtInformación.Multiline = true;
             this.txtInformación.Name = "txtInformación";
-            this.txtInformación.Size = new System.Drawing.Size(338, 20);
+            this.txtInformación.Size = new System.Drawing.Size(338, 125);
             this.txtInformación.TabIndex = 23;
             this.txtInformación.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
@@ -228,11 +245,24 @@
             this.label4.Text = "Ingresa el Número de maletas";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::projecto_s.Properties.Resources.bus_PNG8610;
+            this.pictureBox1.Location = new System.Drawing.Point(-14, -9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(210, 96);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(803, 460);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtInformación);
             this.Controls.Add(this.txtNumeroMaletas);
@@ -253,9 +283,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.linkLabel2);
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.DoubleBuffered = true;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Venta de boletos";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,6 +317,7 @@
         private System.Windows.Forms.TextBox txtNumeroMaletas;
         private System.Windows.Forms.TextBox txtInformación;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
