@@ -10,6 +10,33 @@ using System.Windows.Forms;
 
 namespace projecto_s
 {
+    public struct Persona
+    {
+        String nombre;
+        String apellido;
+        String cedula;
+
+    }
+
+    public struct Boleto
+    {
+        Persona nombre;
+        Persona apellido;
+        double precio;
+        String destino;
+        String hora;
+    }
+    public struct Destino
+    {
+        String lugarViaje;
+        int numeroDeAsientos;
+    }
+    public struct Equipaje
+    {
+        int numeroDemaletas;
+        double pesoMaletas;
+    }
+
     public partial class Form1 : Form
     {
         public Form1()
@@ -69,7 +96,7 @@ namespace projecto_s
 
         private void btnComprar_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
