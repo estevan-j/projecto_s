@@ -12,9 +12,9 @@ namespace projecto_s
 {
     public struct Persona
     {
-        String nombre;
-        String apellido;
-        String cedula;
+         string nombre;
+        string apellido;
+        string cedula;
 
     }
 
@@ -23,14 +23,15 @@ namespace projecto_s
         Persona nombre;
         Persona apellido;
         double precio;
-        String destino;
-        String hora;
+        string destino;
+        string hora;
     }
     public struct Destino
     {
-        String lugarViaje;
+        string lugarViaje;
         int numeroDeAsientos;
     }
+
     public struct Equipaje
     {
         int numeroDemaletas;
@@ -96,12 +97,28 @@ namespace projecto_s
 
         private void btnComprar_Click(object sender, EventArgs e)
         {
-            
+            borrarDatos(); // llamo a la función borrar datos
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void lblDestino_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void borrarDatos()
+        {
+            txtApellido.Clear();
+            txtNombre.Clear();
+            txtCI.Clear();
+            txtAsientos.Clear();
+            txtAsientos.Clear();
+            
         }
     }
 }

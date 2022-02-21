@@ -63,9 +63,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(399, 135);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(63, 16);
             this.label2.TabIndex = 6;
             this.label2.Text = "Maletas";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -82,29 +83,33 @@
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
+            this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellido.Location = new System.Drawing.Point(79, 172);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(44, 13);
+            this.lblApellido.Size = new System.Drawing.Size(66, 16);
             this.lblApellido.TabIndex = 8;
             this.lblApellido.Text = "Apellido";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(79, 131);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.Size = new System.Drawing.Size(63, 16);
             this.lblNombre.TabIndex = 9;
             this.lblNombre.Text = "Nombre";
             // 
             // lblDestino
             // 
             this.lblDestino.AutoSize = true;
+            this.lblDestino.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDestino.Location = new System.Drawing.Point(79, 90);
             this.lblDestino.Name = "lblDestino";
-            this.lblDestino.Size = new System.Drawing.Size(43, 13);
+            this.lblDestino.Size = new System.Drawing.Size(61, 16);
             this.lblDestino.TabIndex = 10;
             this.lblDestino.Text = "Destino";
+            this.lblDestino.Click += new System.EventHandler(this.lblDestino_Click);
             // 
             // lblTitulo
             // 
@@ -121,9 +126,10 @@
             // lblCi
             // 
             this.lblCi.AutoSize = true;
+            this.lblCi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCi.Location = new System.Drawing.Point(86, 210);
             this.lblCi.Name = "lblCi";
-            this.lblCi.Size = new System.Drawing.Size(17, 13);
+            this.lblCi.Size = new System.Drawing.Size(24, 18);
             this.lblCi.TabIndex = 12;
             this.lblCi.Text = "CI";
             this.lblCi.Click += new System.EventHandler(this.label8_Click);
@@ -172,9 +178,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(383, 85);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 13);
+            this.label1.Size = new System.Drawing.Size(148, 16);
             this.label1.TabIndex = 17;
             this.label1.Text = "Numero de Asientos";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
@@ -189,9 +196,10 @@
             // rbtSi
             // 
             this.rbtSi.AutoSize = true;
+            this.rbtSi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtSi.Location = new System.Drawing.Point(512, 131);
             this.rbtSi.Name = "rbtSi";
-            this.rbtSi.Size = new System.Drawing.Size(34, 17);
+            this.rbtSi.Size = new System.Drawing.Size(40, 20);
             this.rbtSi.TabIndex = 19;
             this.rbtSi.TabStop = true;
             this.rbtSi.Text = "Si";
@@ -200,9 +208,10 @@
             // rbtNo
             // 
             this.rbtNo.AutoSize = true;
+            this.rbtNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtNo.Location = new System.Drawing.Point(512, 155);
             this.rbtNo.Name = "rbtNo";
-            this.rbtNo.Size = new System.Drawing.Size(39, 17);
+            this.rbtNo.Size = new System.Drawing.Size(46, 20);
             this.rbtNo.TabIndex = 20;
             this.rbtNo.TabStop = true;
             this.rbtNo.Text = "No";
@@ -210,12 +219,15 @@
             // 
             // btnComprar
             // 
-            this.btnComprar.Location = new System.Drawing.Point(349, 258);
+            this.btnComprar.BackColor = System.Drawing.Color.Maroon;
+            this.btnComprar.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComprar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnComprar.Location = new System.Drawing.Point(347, 251);
             this.btnComprar.Name = "btnComprar";
-            this.btnComprar.Size = new System.Drawing.Size(75, 23);
+            this.btnComprar.Size = new System.Drawing.Size(91, 33);
             this.btnComprar.TabIndex = 21;
             this.btnComprar.Text = "Comprar";
-            this.btnComprar.UseVisualStyleBackColor = true;
+            this.btnComprar.UseVisualStyleBackColor = false;
             this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
             // 
             // txtNumeroMaletas
@@ -238,11 +250,12 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(383, 194);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(367, 198);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(147, 13);
+            this.label4.Size = new System.Drawing.Size(143, 16);
             this.label4.TabIndex = 24;
-            this.label4.Text = "Ingresa el Número de maletas";
+            this.label4.Text = "Número de maletas";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // pictureBox1
