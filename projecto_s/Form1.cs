@@ -79,10 +79,55 @@ namespace projecto_s
         {
 
         }
+        private void controlNombre()
+        {
+            if (lblNombre.Text.Trim() != string.Empty && lblNombre.Text.All(char.IsLetter))
+            {
+                btnContinuar.Enabled = true;
+                errorProvider1.SetError(lblNombre, "");
+            }
+            else
+            {
+                if (!(lblNombre.Text.All(Char.IsLetter)))
+                {
+                    errorProvider1.SetError(lblNombre, "El nombre debe contener letras");
+                }
+                else
+                {
+                    errorProvider1.SetError(lblNombre, "Debe introducir su nombre");
+
+                }
+                btnContinuar.Enabled = false;
+                lblNombre.Focus();
+            }
+        }
+        private void controlApellido()
+        {
+            if (lblApellido.Text.Trim() != string.Empty && lblApellido.Text.All(char.IsLetter))
+            {
+                btnContinuar.Enabled = true;
+                errorProvider1.SetError(lblApellido, "");
+            }
+            else
+            {
+                if (!(lblApellido.Text.All(Char.IsLetter)))
+                {
+                    errorProvider1.SetError(lblApellido, "El nombre debe contener letras");
+                }
+                else
+                {
+                    errorProvider1.SetError(lblApellido, "Debe introducir su nombre");
+
+                }
+                btnContinuar.Enabled = false;
+                lblApellido.Focus();
+            }
+        }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            controlNombre();
+            controlApellido();
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
@@ -104,7 +149,7 @@ namespace projecto_s
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            btnContinuar.Enabled = false;
         }
 
         private void lblDestino_Click(object sender, EventArgs e)
@@ -116,9 +161,13 @@ namespace projecto_s
             txtApellido.Clear();
             txtNombre.Clear();
             txtCI.Clear();
-            txtAsientos.Clear();
-            txtAsientos.Clear();
+           
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
