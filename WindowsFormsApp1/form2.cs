@@ -90,26 +90,36 @@ namespace WindowsFormsApp1
         }
         public void llenarDatos()
         {
-
-            if (cmbDestinos.SelectedIndex > 0)
+            if (cmbDestinos.SelectedIndex > -1)
             {
                 compra.destino = cmbDestinos.Text;
+             
                 try
                 {
-                    compra.asientos = Convert.ToInt16(txtBoletos.Text);
-                } catch (NullReferenceException)
+                    compra.asientos = int.Parse(txtBoletos.Text);
+                    if (rbtSi.Checked)
+                    {
+                        maleta.numeroMaletas = int.Parse(txtCantidad.Text);
+                    }
+
+                }
+                catch (FormatException )
+                {
+                    MessageBox.Show("Ingrese valores numericos");
+                }
+                catch (Exception )
                 {
                     lblMensaje.Visible = true;
                 }
-                
             }
-            if (rbtSi.Checked)
+            else 
             {
-                maleta.numeroMaletas = int.Parse(txtCantidad.Text);
+                lblCombo.Visible = true;
             }
+            
             
         }
 
-      
+       
     }
 }

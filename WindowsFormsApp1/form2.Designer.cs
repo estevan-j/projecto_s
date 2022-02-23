@@ -43,6 +43,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtBoletos = new System.Windows.Forms.TextBox();
             this.lblMensaje = new System.Windows.Forms.Label();
+            this.lblCombo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cmbDestinos
@@ -56,7 +57,7 @@
             // lblDestino
             // 
             this.lblDestino.AutoSize = true;
-            this.lblDestino.Location = new System.Drawing.Point(74, 210);
+            this.lblDestino.Location = new System.Drawing.Point(74, 205);
             this.lblDestino.Name = "lblDestino";
             this.lblDestino.Size = new System.Drawing.Size(51, 13);
             this.lblDestino.TabIndex = 1;
@@ -65,7 +66,7 @@
             // lblmaleta
             // 
             this.lblmaleta.AutoSize = true;
-            this.lblmaleta.Location = new System.Drawing.Point(362, 202);
+            this.lblmaleta.Location = new System.Drawing.Point(403, 200);
             this.lblmaleta.Name = "lblmaleta";
             this.lblmaleta.Size = new System.Drawing.Size(44, 13);
             this.lblmaleta.TabIndex = 2;
@@ -74,7 +75,7 @@
             // rbtNo
             // 
             this.rbtNo.AutoSize = true;
-            this.rbtNo.Location = new System.Drawing.Point(521, 198);
+            this.rbtNo.Location = new System.Drawing.Point(533, 198);
             this.rbtNo.Name = "rbtNo";
             this.rbtNo.Size = new System.Drawing.Size(39, 17);
             this.rbtNo.TabIndex = 4;
@@ -85,7 +86,7 @@
             // rbtSi
             // 
             this.rbtSi.AutoSize = true;
-            this.rbtSi.Location = new System.Drawing.Point(462, 198);
+            this.rbtSi.Location = new System.Drawing.Point(481, 196);
             this.rbtSi.Name = "rbtSi";
             this.rbtSi.Size = new System.Drawing.Size(34, 17);
             this.rbtSi.TabIndex = 5;
@@ -97,7 +98,7 @@
             // lblCantidad
             // 
             this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(353, 235);
+            this.lblCantidad.Location = new System.Drawing.Point(379, 235);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(101, 13);
             this.lblCantidad.TabIndex = 6;
@@ -106,7 +107,7 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(460, 235);
+            this.txtCantidad.Location = new System.Drawing.Point(502, 235);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(100, 20);
             this.txtCantidad.TabIndex = 7;
@@ -156,7 +157,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(74, 238);
+            this.label1.Location = new System.Drawing.Point(74, 241);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 12;
@@ -164,7 +165,7 @@
             // 
             // txtBoletos
             // 
-            this.txtBoletos.Location = new System.Drawing.Point(163, 232);
+            this.txtBoletos.Location = new System.Drawing.Point(163, 238);
             this.txtBoletos.Name = "txtBoletos";
             this.txtBoletos.Size = new System.Drawing.Size(100, 20);
             this.txtBoletos.TabIndex = 13;
@@ -172,7 +173,7 @@
             // lblMensaje
             // 
             this.lblMensaje.AutoSize = true;
-            this.lblMensaje.ForeColor = System.Drawing.Color.Red;
+            this.lblMensaje.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lblMensaje.Location = new System.Drawing.Point(269, 235);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(97, 13);
@@ -180,11 +181,23 @@
             this.lblMensaje.Text = "*Campo Obligatorio";
             this.lblMensaje.Visible = false;
             // 
+            // lblCombo
+            // 
+            this.lblCombo.AutoSize = true;
+            this.lblCombo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblCombo.Location = new System.Drawing.Point(290, 205);
+            this.lblCombo.Name = "lblCombo";
+            this.lblCombo.Size = new System.Drawing.Size(97, 13);
+            this.lblCombo.TabIndex = 15;
+            this.lblCombo.Text = "*Campo Obligatorio";
+            this.lblCombo.Visible = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 472);
+            this.Controls.Add(this.lblCombo);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.txtBoletos);
             this.Controls.Add(this.label1);
@@ -221,6 +234,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBoletos;
         private System.Windows.Forms.Label lblMensaje;
+        private System.Windows.Forms.Label lblCombo;
     }
 }
 
