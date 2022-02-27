@@ -21,55 +21,78 @@ namespace projecto_s
 
       
        
-        private void controlNombre()
+        public void controlNombre()
         {
-            if (lblNombre.Text.Trim() != string.Empty && lblNombre.Text.All(char.IsLetter))
+            if (txtName.Text.Trim() != string.Empty && txtName.Text.All(char.IsLetter))
             {
                 btnContinuar.Enabled = true;
-                errorProvider1.SetError(lblNombre, "");
+                errorProvider1.SetError(txtName, "");
             }
             else
             {
-                if (!(lblNombre.Text.All(Char.IsLetter)))
+                if (!(txtName.Text.All(Char.IsLetter)))
                 {
-                    errorProvider1.SetError(lblNombre, "El nombre debe contener letras");
+                    errorProvider1.SetError(txtName, "El nombre debe contener letras");
                 }
                 else
                 {
-                    errorProvider1.SetError(lblNombre, "Debe introducir su nombre");
+                    errorProvider1.SetError(txtName, "Debe introducir su nombre");
 
                 }
                 btnContinuar.Enabled = false;
-                lblNombre.Focus();
+                txtName.Focus();
             }
         }
         private void controlApellido()
         {
-            if (lblApellido.Text.Trim() != string.Empty && lblApellido.Text.All(char.IsLetter))
+            if (txtApellido.Text.Trim() != string.Empty && txtApellido.Text.All(char.IsLetter))
             {
                 btnContinuar.Enabled = true;
-                errorProvider1.SetError(lblApellido, "");
+                errorProvider1.SetError(txtApellido, "");
             }
             else
             {
-                if (!(lblApellido.Text.All(Char.IsLetter)))
+                if (!(txtApellido.Text.All(Char.IsLetter)))
                 {
-                    errorProvider1.SetError(lblApellido, "El nombre debe contener letras");
+                    errorProvider1.SetError(txtApellido, "El nombre debe contener letras");
                 }
                 else
                 {
-                    errorProvider1.SetError(lblApellido, "Debe introducir su nombre");
+                    errorProvider1.SetError(txtApellido, "Debe introducir su nombre");
 
                 }
                 btnContinuar.Enabled = false;
-                lblApellido.Focus();
+                txtApellido.Focus();
+            }
+        }
+        private void controlCedula()
+        {
+            if (txtCedula.Text.Trim() != string.Empty && txtCedula.Text.All(char.IsNumber))
+            {
+                btnContinuar.Enabled = true;
+                errorProvider1.SetError(txtCedula, "");
+            }
+            else
+            {
+                if (!(txtCedula.Text.All(Char.IsNumber)))
+                {
+                    errorProvider1.SetError(txtCedula, "El nombre debe contener letras");
+                }
+                else
+                {
+                    errorProvider1.SetError(txtCedula, "Debe introducir su nombre");
+
+                }
+                btnContinuar.Enabled = false;
+                txtCedula.Focus();
             }
         }
 
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            controlNombre();
-            controlApellido();
+            
+            
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
@@ -100,9 +123,9 @@ namespace projecto_s
         }
         public void borrarDatos()
         {
-            txtApellido.Clear();
+            txtName.Clear();
             txtNombre.Clear();
-            txtCI.Clear();
+            txtApellido.Clear();
            
             
         }
@@ -115,6 +138,26 @@ namespace projecto_s
         private void btnContinuar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtApellido_TextChanged(object sender, EventArgs e)
+        {
+            controlNombre();
+        }
+
+        private void textBox1_TextChanged_2(object sender, EventArgs e)
+        {
+            controlCedula();
+        }
+
+        private void txtApellido_TextChanged_1(object sender, EventArgs e)
+        {
+            controlApellido();
         }
     }
 }
