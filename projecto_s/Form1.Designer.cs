@@ -34,13 +34,13 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblCi = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtCI = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnContinuar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lblCi = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtCedula = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -87,12 +87,33 @@
             this.lblTitulo.Size = new System.Drawing.Size(100, 23);
             this.lblTitulo.TabIndex = 28;
             // 
+            // lblCi
+            // 
+            this.lblCi.Location = new System.Drawing.Point(0, 0);
+            this.lblCi.Name = "lblCi";
+            this.lblCi.Size = new System.Drawing.Size(100, 23);
+            this.lblCi.TabIndex = 27;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(0, 0);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.TabIndex = 26;
+            // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(355, 181);
+            this.txtApellido.Location = new System.Drawing.Point(355, 131);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(100, 20);
             this.txtApellido.TabIndex = 15;
+            // 
+            // txtCI
+            // 
+            this.txtCI.Location = new System.Drawing.Point(355, 185);
+            this.txtCI.Name = "txtCI";
+            this.txtCI.Size = new System.Drawing.Size(100, 20);
+            this.txtCI.TabIndex = 16;
             // 
             // pictureBox1
             // 
@@ -106,40 +127,17 @@
             // 
             // btnContinuar
             // 
-            this.btnContinuar.Location = new System.Drawing.Point(335, 277);
+            this.btnContinuar.Location = new System.Drawing.Point(355, 308);
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Size = new System.Drawing.Size(95, 43);
             this.btnContinuar.TabIndex = 26;
             this.btnContinuar.Text = "Continuar";
             this.btnContinuar.UseVisualStyleBackColor = true;
-            this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
+            
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // lblCi
-            // 
-            this.lblCi.AutoSize = true;
-            this.lblCi.Location = new System.Drawing.Point(272, 233);
-            this.lblCi.Name = "lblCi";
-            this.lblCi.Size = new System.Drawing.Size(17, 13);
-            this.lblCi.TabIndex = 30;
-            this.lblCi.Text = "CI";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(355, 134);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtNombre.TabIndex = 31;
-            // 
-            // txtCedula
-            // 
-            this.txtCedula.Location = new System.Drawing.Point(355, 226);
-            this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(100, 20);
-            this.txtCedula.TabIndex = 32;
             // 
             // Form1
             // 
@@ -148,12 +146,12 @@
             this.BackColor = System.Drawing.Color.Silver;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(803, 460);
-            this.Controls.Add(this.txtCedula);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.lblCi);
             this.Controls.Add(this.btnContinuar);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.txtCI);
             this.Controls.Add(this.txtApellido);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.lblCi);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblApellido);
@@ -178,15 +176,13 @@
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblTitulo;
-       
+        private System.Windows.Forms.Label lblCi;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtApellido;
-        
+        private System.Windows.Forms.TextBox txtCI;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnContinuar;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.Label lblCi;
-        private System.Windows.Forms.TextBox txtCedula;
-        private System.Windows.Forms.TextBox txtNombre;
     }
 }
 

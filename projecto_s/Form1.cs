@@ -17,15 +17,43 @@ namespace projecto_s
         {
             InitializeComponent();
         }
-        struct Persona
+
+
+      
+        private void lbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            string nombre;
-            string apellido;
-            string ci;
+
         }
 
-        Persona cliente;
+        private void label7_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
         private void controlNombre()
         {
             if (lblNombre.Text.Trim() != string.Empty && lblNombre.Text.All(char.IsLetter))
@@ -71,28 +99,50 @@ namespace projecto_s
             }
         }
 
-     
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            controlNombre();
+            controlApellido();
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnComprar_Click(object sender, EventArgs e)
+        {
+            borrarDatos(); // llamo a la función borrar datos
+
+
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             btnContinuar.Enabled = false;
         }
 
-       
+        private void lblDestino_Click(object sender, EventArgs e)
+        {
+
+        }
         public void borrarDatos()
         {
             txtApellido.Clear();
             txtNombre.Clear();
-            txtCedula.Clear();
+            txtCI.Clear();
+           
+            
         }
 
-        private void btnContinuar_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            controlNombre();
-            controlApellido();
-            borrarDatos();
+            
         }
-
-       
     }
 }
