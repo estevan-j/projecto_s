@@ -27,6 +27,7 @@ namespace WindowsFormsApp1
         {
             public int asientos;
             public double valor;
+            public double totalPagar;
             public string destino;
         }
         Equipaje maleta;
@@ -36,19 +37,19 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             lugares[0].lugarDeDestino = "Guayaquil";
-            lugares[0].precio = 4.5;
+            lugares[0].precio = 9;
             lugares[0].horario = "13:00";
             lugares[1].lugarDeDestino = "Cuenca";
-            lugares[1].precio = 5.3;
+            lugares[1].precio = 15;
             lugares[1].horario = "15:00";
             lugares[2].lugarDeDestino = "Napo";
-            lugares[2].precio = 5.3;
+            lugares[2].precio = 10;
             lugares[2].horario = "12:00";
             lugares[3].lugarDeDestino = "Loja";
-            lugares[3].precio = 4.7;
+            lugares[3].precio = 18;
             lugares[3].horario = "18:00";
             lugares[4].lugarDeDestino = "Carchi";
-            lugares[4].precio = 3.8;
+            lugares[4].precio = 7.5;
             lugares[4].horario = "17:00";
             cmbDestinos.Items.Add(lugares[0].lugarDeDestino);
             cmbDestinos.Items.Add(lugares[1].lugarDeDestino);
@@ -99,6 +100,7 @@ namespace WindowsFormsApp1
                 {
                     errorProvider2.Clear();
                     compra.asientos = int.Parse(txtBoletos.Text);
+
                     validarMaletas();
                 }
                 catch (FormatException)
@@ -140,11 +142,37 @@ namespace WindowsFormsApp1
                 }
             }
         }
-
-        private void lstLugares_SelectedIndexChanged(object sender, EventArgs e)
+        public void calcularSubtotal(int numero, int maletas)
         {
-
+            switch (cmbDestinos.SelectedIndex){
+                case 0:
+                     compra.valor = 9 * numero;
+                    maleta.valorTotal = 1 * maletas;
+                    compra.totalPagar = compra.valor + maleta.valorTotal;
+                    break;
+                case 1:
+                    compra.valor = 9 * numero;
+                    maleta.valorTotal = 1 * maletas;
+                    compra.totalPagar = compra.valor + maleta.valorTotal;
+                    break;
+                case 2:
+                    compra.valor = 9 * numero;
+                    maleta.valorTotal = 1 * maletas;
+                    compra.totalPagar = compra.valor + maleta.valorTotal;
+                    break;
+                case 3:
+                    compra.valor = 9 * numero;
+                    maleta.valorTotal = 1 * maletas;
+                    compra.totalPagar = compra.valor + maleta.valorTotal;
+                    break;
+                case 4:
+                    compra.valor = 9 * numero;
+                    maleta.valorTotal = 1 * maletas;
+                    compra.totalPagar = compra.valor + maleta.valorTotal;
+                    break;
+            }
         }
+      
     }
 
        
