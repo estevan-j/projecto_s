@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
         struct Equipaje
         {
             public int numeroMaletas;
-            public int valorTotal;
+            public double valorTotal;
         }
         struct Boleto
         {
@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
         }
         Equipaje maleta;
         Boleto compra;
-        Destino [] lugares = new Destino [5];
+        Destino[] lugares = new Destino[5];
         public Form2()
         {
             InitializeComponent();
@@ -55,12 +55,12 @@ namespace WindowsFormsApp1
             cmbDestinos.Items.Add(lugares[2].lugarDeDestino);
             cmbDestinos.Items.Add(lugares[3].lugarDeDestino);
             cmbDestinos.Items.Add(lugares[4].lugarDeDestino);
-            for (int i=0; i<5; i++)
+            foreach (Destino lugares in lugares)
             {
                 ListViewItem items = new ListViewItem();
-                items = lstLugares.Items.Add(lugares[i].lugarDeDestino);
-                items.SubItems.Add(lugares[i].precio.ToString());
-                items.SubItems.Add(lugares[i].horario);
+                items = lstLugares.Items.Add(lugares.lugarDeDestino);
+                items.SubItems.Add(lugares.precio.ToString());
+                items.SubItems.Add(lugares.horario);
             }
         }
 
@@ -87,39 +87,61 @@ namespace WindowsFormsApp1
         {
             txtBoletos.Text = null;
             txtCantidad.Text = null;
+            cmbDestinos.
         }
         public void llenarDatos()
         {
             if (cmbDestinos.SelectedIndex > -1)
             {
+                errorProvider1.Clear();
                 compra.destino = cmbDestinos.Text;
-             
                 try
                 {
+                    errorProvider2.Clear();
                     compra.asientos = int.Parse(txtBoletos.Text);
-                    if (rbtSi.Checked)
+                    validarMaletas();
+                }
+                catch (FormatException)
+                {
+                    if (txtBoletos.Text == "")
                     {
-                        maleta.numeroMaletas = int.Parse(txtCantidad.Text);
+                        errorProvider2.SetError(txtBoletos, "*Ingresa el número de boletos");
                     }
-
-                }
-                catch (FormatException )
-                {
-                    MessageBox.Show("Ingrese valores numericos");
-                }
-                catch (Exception )
-                {
-                    lblMensaje.Visible = true;
-                }
+                    else{
+                        MessageBox.Show("Ingresa valores numéricos","Error Boletos",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    }
+                }     
             }
             else 
             {
-                lblCombo.Visible = true;
+                errorProvider1.SetError(cmbDestinos, "*Selecciona un lugar");
             }
             
-            
         }
+        public void validarMaletas()
+        {
+            if (rbtSi.Checked)
+            {
+                try
+                {
+                    maleta.numeroMaletas = int.Parse(txtCantidad.Text);
+                }
+                catch (FormatException)
+                {
+                    if (txtCantidad.Text == "")
+                    {
+                        errorProvider3.SetError(txtCantidad, "*Ingresa el número ");
+                    }
+                    else
+                    {
+                        errorProvider3.Clear();
+                        MessageBox.Show("Ingresa valores numéricos","Error Maletas",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+    }
 
        
-    }
 }
+

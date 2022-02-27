@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.cmbDestinos = new System.Windows.Forms.ComboBox();
             this.lblDestino = new System.Windows.Forms.Label();
             this.lblmaleta = new System.Windows.Forms.Label();
@@ -42,8 +43,12 @@
             this.Horario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.txtBoletos = new System.Windows.Forms.TextBox();
-            this.lblMensaje = new System.Windows.Forms.Label();
-            this.lblCombo = new System.Windows.Forms.Label();
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbDestinos
@@ -115,7 +120,7 @@
             // 
             // btnComprar
             // 
-            this.btnComprar.Location = new System.Drawing.Point(348, 269);
+            this.btnComprar.Location = new System.Drawing.Point(318, 273);
             this.btnComprar.Name = "btnComprar";
             this.btnComprar.Size = new System.Drawing.Size(75, 23);
             this.btnComprar.TabIndex = 9;
@@ -130,7 +135,7 @@
             this.Precio,
             this.Horario});
             this.lstLugares.HideSelection = false;
-            this.lstLugares.Location = new System.Drawing.Point(186, 12);
+            this.lstLugares.Location = new System.Drawing.Point(186, 23);
             this.lstLugares.Name = "lstLugares";
             this.lstLugares.Size = new System.Drawing.Size(386, 155);
             this.lstLugares.TabIndex = 11;
@@ -170,35 +175,23 @@
             this.txtBoletos.Size = new System.Drawing.Size(100, 20);
             this.txtBoletos.TabIndex = 13;
             // 
-            // lblMensaje
+            // errorProvider2
             // 
-            this.lblMensaje.AutoSize = true;
-            this.lblMensaje.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblMensaje.Location = new System.Drawing.Point(269, 235);
-            this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(97, 13);
-            this.lblMensaje.TabIndex = 14;
-            this.lblMensaje.Text = "*Campo Obligatorio";
-            this.lblMensaje.Visible = false;
+            this.errorProvider2.ContainerControl = this;
             // 
-            // lblCombo
+            // errorProvider3
             // 
-            this.lblCombo.AutoSize = true;
-            this.lblCombo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblCombo.Location = new System.Drawing.Point(290, 205);
-            this.lblCombo.Name = "lblCombo";
-            this.lblCombo.Size = new System.Drawing.Size(97, 13);
-            this.lblCombo.TabIndex = 15;
-            this.lblCombo.Text = "*Campo Obligatorio";
-            this.lblCombo.Visible = false;
+            this.errorProvider3.ContainerControl = this;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 472);
-            this.Controls.Add(this.lblCombo);
-            this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.txtBoletos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lstLugares);
@@ -210,8 +203,12 @@
             this.Controls.Add(this.lblmaleta);
             this.Controls.Add(this.lblDestino);
             this.Controls.Add(this.cmbDestinos);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Form2";
             this.Text = "euaf";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,8 +230,9 @@
         private System.Windows.Forms.ColumnHeader Horario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBoletos;
-        private System.Windows.Forms.Label lblMensaje;
-        private System.Windows.Forms.Label lblCombo;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 
