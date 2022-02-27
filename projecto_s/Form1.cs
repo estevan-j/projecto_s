@@ -10,34 +10,7 @@ using System.Windows.Forms;
 
 namespace projecto_s
 {
-    public struct Persona
-    {
-         string nombre;
-        string apellido;
-        string cedula;
-
-    }
-
-    public struct Boleto
-    {
-        Persona nombre;
-        Persona apellido;
-        double precio;
-        string destino;
-        string hora;
-    }
-    public struct Destino
-    {
-        string lugarViaje;
-        int numeroDeAsientos;
-    }
-
-    public struct Equipaje
-    {
-        int numeroDemaletas;
-        double pesoMaletas;
-    }
-
+   
     public partial class Form1 : Form
     {
         public Form1()
@@ -45,6 +18,9 @@ namespace projecto_s
             InitializeComponent();
         }
 
+
+        
+=======
         private void lbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 

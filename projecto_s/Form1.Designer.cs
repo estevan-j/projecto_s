@@ -55,12 +55,10 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(88, 210);
+            this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label3.Size = new System.Drawing.Size(100, 23);
+            this.label3.TabIndex = 29;
             // 
             // lblApellido
             // 
@@ -68,7 +66,7 @@
             this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellido.Location = new System.Drawing.Point(239, 185);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(66, 16);
+            this.lblApellido.Size = new System.Drawing.Size(65, 16);
             this.lblApellido.TabIndex = 8;
             this.lblApellido.Text = "Apellido";
             // 
@@ -78,51 +76,41 @@
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(242, 135);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(63, 16);
+            this.lblNombre.Size = new System.Drawing.Size(62, 16);
             this.lblNombre.TabIndex = 9;
             this.lblNombre.Text = "Nombre";
             // 
             // lblTitulo
             // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Modern No. 20", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTitulo.Location = new System.Drawing.Point(197, 18);
+            this.lblTitulo.Location = new System.Drawing.Point(0, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(425, 29);
-            this.lblTitulo.TabIndex = 11;
-            this.lblTitulo.Text = "Boletería Viajes Interprovinciales";
-            this.lblTitulo.Click += new System.EventHandler(this.label7_Click);
+            this.lblTitulo.Size = new System.Drawing.Size(100, 23);
+            this.lblTitulo.TabIndex = 28;
             // 
             // lblCi
             // 
-            this.lblCi.AutoSize = true;
-            this.lblCi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCi.Location = new System.Drawing.Point(268, 236);
+            this.lblCi.Location = new System.Drawing.Point(0, 0);
             this.lblCi.Name = "lblCi";
-            this.lblCi.Size = new System.Drawing.Size(24, 18);
-            this.lblCi.TabIndex = 12;
-            this.lblCi.Text = "CI";
-            this.lblCi.Click += new System.EventHandler(this.label8_Click);
+            this.lblCi.Size = new System.Drawing.Size(100, 23);
+            this.lblCi.TabIndex = 27;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(355, 131);
+            this.txtNombre.Location = new System.Drawing.Point(0, 0);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtNombre.TabIndex = 14;
-            this.txtNombre.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtNombre.TabIndex = 26;
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(355, 181);
+            this.txtApellido.Location = new System.Drawing.Point(355, 131);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(100, 20);
             this.txtApellido.TabIndex = 15;
             // 
             // txtCI
             // 
-            this.txtCI.Location = new System.Drawing.Point(355, 234);
+            this.txtCI.Location = new System.Drawing.Point(355, 185);
             this.txtCI.Name = "txtCI";
             this.txtCI.Size = new System.Drawing.Size(100, 20);
             this.txtCI.TabIndex = 16;
@@ -174,7 +162,6 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Venta de boletos";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
