@@ -133,7 +133,7 @@
             this.btnContinuar.TabIndex = 26;
             this.btnContinuar.Text = "Continuar";
             this.btnContinuar.UseVisualStyleBackColor = true;
-            
+            this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
             // 
             // errorProvider1
             // 

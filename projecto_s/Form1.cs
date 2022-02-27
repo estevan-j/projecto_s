@@ -20,40 +20,7 @@ namespace projecto_s
 
 
       
-        private void lbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
+       
         private void controlNombre()
         {
             if (lblNombre.Text.Trim() != string.Empty && lblNombre.Text.All(char.IsLetter))
@@ -143,6 +110,11 @@ namespace projecto_s
         private void button1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnContinuar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
