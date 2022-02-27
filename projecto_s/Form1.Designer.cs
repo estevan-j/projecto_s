@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
@@ -38,7 +39,10 @@
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtCI = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnContinuar = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // linkLabel2
@@ -121,6 +125,20 @@
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
             // 
+            // btnContinuar
+            // 
+            this.btnContinuar.Location = new System.Drawing.Point(355, 308);
+            this.btnContinuar.Name = "btnContinuar";
+            this.btnContinuar.Size = new System.Drawing.Size(95, 43);
+            this.btnContinuar.TabIndex = 26;
+            this.btnContinuar.Text = "Continuar";
+            this.btnContinuar.UseVisualStyleBackColor = true;
+            this.btnContinuar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -128,6 +146,7 @@
             this.BackColor = System.Drawing.Color.Silver;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(803, 460);
+            this.Controls.Add(this.btnContinuar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtCI);
             this.Controls.Add(this.txtApellido);
@@ -144,6 +163,7 @@
             this.Name = "Form1";
             this.Text = "Venta de boletos";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,6 +181,8 @@
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtCI;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnContinuar;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 
