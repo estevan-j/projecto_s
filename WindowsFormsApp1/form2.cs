@@ -80,7 +80,7 @@ namespace WindowsFormsApp1
         private void btnComprar_Click(object sender, EventArgs e)
         {
             llenarDatos();
-            
+            limpiarDatos();
         }
 
         public void limpiarDatos()
@@ -139,6 +139,11 @@ namespace WindowsFormsApp1
                     }
                 }
             }
+        }
+
+        private void lstLugares_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

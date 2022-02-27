@@ -141,6 +141,7 @@
             this.lstLugares.TabIndex = 11;
             this.lstLugares.UseCompatibleStateImageBehavior = false;
             this.lstLugares.View = System.Windows.Forms.View.Details;
+            this.lstLugares.SelectedIndexChanged += new System.EventHandler(this.lstLugares_SelectedIndexChanged);
             // 
             // opciones
             // 
