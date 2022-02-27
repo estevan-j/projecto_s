@@ -58,6 +58,7 @@
             this.cmbDestinos.Name = "cmbDestinos";
             this.cmbDestinos.Size = new System.Drawing.Size(121, 21);
             this.cmbDestinos.TabIndex = 0;
+            this.cmbDestinos.SelectedIndexChanged += new System.EventHandler(this.cmbDestinos_SelectedIndexChanged);
             // 
             // lblDestino
             // 
@@ -206,6 +207,7 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Form2";
             this.Text = "euaf";
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

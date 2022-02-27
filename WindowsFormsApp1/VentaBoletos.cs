@@ -172,7 +172,16 @@ namespace WindowsFormsApp1
                     break;
             }
         }
-      
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbDestinos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
        
